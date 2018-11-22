@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1afe4e3-c84c-49fc-9aea-c6542683e9a0" name="Default" comment="" />
+    <list default="true" id="d1afe4e3-c84c-49fc-9aea-c6542683e9a0" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/IdentiCyte/__init__.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +59,7 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="WriteResult.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WriteResult.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IdentiCyte/WriteResult.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -67,6 +69,11 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/IdentiCyte/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="DisplayIdentified.py" pinned="false" current-in-tab="false">
@@ -81,27 +88,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConstructLibrary.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IdentiCyte/ConstructLibrary.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CellVerUI.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IdentiCyte/CellVerUI.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#249#270#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -111,7 +105,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/IdentiCyte" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -125,6 +119,8 @@
         <option value="$PROJECT_DIR$/IdentiCyte/test/UnitTests.py" />
         <option value="$PROJECT_DIR$/IdentiCyte/__main__.py" />
         <option value="$PROJECT_DIR$/IdentiCyte/CellDetection.py" />
+        <option value="$PROJECT_DIR$/IdentiCyte/__init__.py" />
+        <option value="$PROJECT_DIR$/IdentiCyte/setup.py" />
       </list>
     </option>
   </component>
@@ -219,7 +215,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.16174497" />
@@ -373,6 +369,12 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IdentiCyte/setup.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IdentiCyte/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
