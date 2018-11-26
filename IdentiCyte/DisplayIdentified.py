@@ -54,6 +54,7 @@ def display(img_file, window=None):
 
     pics_dir = os.path.split(img_file)[0]
     image_name = os.path.split(img_file)[-1]
+    fontName = os.path.join(os.path.dirname(__file__), 'liberation-fonts-ttf-2.00.1', 'LiberationSans-Regular.ttf')
 
     # Get the cell data
     res_file = os.path.abspath(os.path.join(pics_dir, 'IdentifiedCellInfo.pkl'))
@@ -75,7 +76,7 @@ def display(img_file, window=None):
         colorDict['Edge'] = colors[colInd]
         colInd = (colInd + 1) % len(colors)
 
-    font = ImageFont.truetype(font='arial.ttf', size=fontSize)
+    font = ImageFont.truetype(font=fontName, size=fontSize)
     img_names = os.listdir(pics_dir)
     # Remove all non image files
     for entry in range(len(img_names)-1, -1, -1):
