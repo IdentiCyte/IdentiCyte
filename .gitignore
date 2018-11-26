@@ -1,2 +1,4 @@
 IdentiCyte/__pycache__
 venv/
+build/
+dist/

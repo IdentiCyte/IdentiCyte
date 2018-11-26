@@ -26,7 +26,8 @@ def driver(l_dir,
            cellSize=9000,
            pcThresh=90,
            confThresh=50,
-           bf=True):
+           bf=True,
+           near=10):
     """
     Drives the analysis
 
@@ -59,6 +60,8 @@ def driver(l_dir,
         between 0 and 100 inclusive.
     bf : bool
         Indicates whether the image is bright field(True) or fluorescent(False)
+    near : int
+        The number of nearest neighbours in the library that will be considered when classifying a cell
    """
     start = timeit.default_timer()
 
@@ -93,7 +96,8 @@ def driver(l_dir,
                                                      minSize=cellSize,
                                                      pcThresh=pcThresh,
                                                      confThresh=confThresh,
-                                                     bf=bf)
+                                                     bf=bf,
+                                                     near=near)
 
         if not Globs.end:
             if 'Other' not in typeArray:

@@ -40,6 +40,7 @@ class MainWindow():
         self.brigthfield = BooleanVar()
         self.thread = Thread()
         self.dispThread = Thread()
+        self.near = IntVar()
         self.version = "1.0"
         Globs.end = False
 
@@ -52,6 +53,7 @@ class MainWindow():
         self.cellSize.set(9000)
         self.brigthfield.set(True)
         self.cellRadius.set(155)
+        self.near.set(10)
 
         self.select = ttk.Notebook()
         self.main_ = ttk.Frame(self.select)
@@ -206,12 +208,27 @@ class MainWindow():
         self.compile_btn = Button(master, text="Compile Library", command=lambda: self.compileLibrary())
         self.compile_btn.pack(in_=self.library_, side=TOP)
 ###########Options Tab##################################################################
+        # Near Images Frame
+        self.nearFrame = Frame(master)
+        self.nearFrame.pack(in_=self.options_, side=BOTTOM)
+        vcmd2 = (master.register(self.validateSize), '%d', '%i', '%P', '%s', '%S', '%v', '%V', '%W')
 
+        # Near Images Threshold
+        self.nearLabel = Label(master, text='Number of most similar images to consider: ')
+        self.nearPercent = Label(master, text=' images')
+        self.nearBox = Entry(master, validate='key', validatecommand=vcmd2, width=4)
+
+        self.nearLabel.pack(in_=self.nearFrame, side=LEFT)
+        self.nearPercent.pack(in_=self.nearFrame, side=RIGHT)
+        self.nearBox.pack(in_=self.nearFrame, side=BOTTOM)
+        self.nearBox["textvariable"] = self.near
+
+        # Principal Components Frame
         self.pcFrame = Frame(master)
         self.pcFrame.pack(in_=self.options_, side=BOTTOM)
         vcmd = (master.register(self.validatePerc), '%d', '%i', '%P', '%s', '%S', '%v', '%V', '%W')
 
-        # Principal Components Threshold
+        # Confidences Threshold
         self.pcLabel = Label(master, text='Percent of Principal Components to take: ')
         self.pcPercent = Label(master, text='%')
         self.pcBox = Entry(master, validate='key', validatecommand=vcmd, width=4)
@@ -221,6 +238,7 @@ class MainWindow():
         self.pcBox.pack(in_=self.pcFrame, side=BOTTOM)
         self.pcBox["textvariable"] = self.pcThresh
 
+        # Confidences Frame
         self.confFrame = Frame(master)
         self.confFrame.pack(in_=self.options_, side=BOTTOM)
 
@@ -427,6 +445,7 @@ class MainWindow():
             meth=self.method.get()
             cellSize=self.cellSize.get()
             bf = self.brigthfield.get()
+            near = self.near.get()
             if not os.path.exists(pic_dir):
                 Globs.end = True
                 self.printout('Please select an input folder.')
@@ -446,7 +465,8 @@ class MainWindow():
                                            cellSize,
                                            pcs,
                                            confLev,
-                                           bf))
+                                           bf,
+                                           near))
                 self.thread.start()
         else:
             self.printout('The program is currently busy.')

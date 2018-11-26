@@ -39,7 +39,7 @@ def findThresh(arr, level):
     return -1
 
 
-def PCARecognition(inputData, resDict, userVer, library_dir, typeArray, pcThresh=90, confThresh=50):
+def PCARecognition(inputData, resDict, userVer, library_dir, typeArray, pcThresh=90, confThresh=50, near=10):
     """
     Recognises cells
 
@@ -64,6 +64,8 @@ def PCARecognition(inputData, resDict, userVer, library_dir, typeArray, pcThresh
     confThresh : float
         The confidence level a cell must have for it to be automatically classified. This is a percentage nd should be
         between 0 and 100 inclusive.
+    near : int
+        THe number of nearest neighbours in the library that will be considered when classifying a cell
 
     Returns
     -------
@@ -128,7 +130,7 @@ def PCARecognition(inputData, resDict, userVer, library_dir, typeArray, pcThresh
             dist, idx = ((list(t) for t in zip(*sorted(zip(dist, idx)))))
 
             # Select the closest cells from the image library to the current cell
-            top = dist[0:10]
+            top = dist[0:near]
 
             # Build a dictionary and a lookup array to keep track of what cell types are closest to the current cell
             typeDic = {}

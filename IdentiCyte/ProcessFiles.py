@@ -29,7 +29,8 @@ def ProcessFiles(l_dir,
                  minSize=9000,
                  pcThresh=90,
                  confThresh=50,
-                 bf=True):
+                 bf=True,
+                 near=10):
     """
     Reads in images and prepares them for analysis.
 
@@ -64,6 +65,8 @@ def ProcessFiles(l_dir,
         between 0 and 100 inclusive.
     bf : bool
         Indicates whether the image is bright field(True) or fluorescent(False)
+    near : int
+        THe number of nearest neighbours in the library that will be considered when classifying a cell
 
     Returns
     -------
@@ -164,7 +167,8 @@ def ProcessFiles(l_dir,
                                                        l_dir,
                                                        typeArray,
                                                        pcThresh,
-                                                       confThresh)
+                                                       confThresh,
+                                                       near)
             locations.append(imInfo)
         return cellTypes, cellConf, locations
     else:
