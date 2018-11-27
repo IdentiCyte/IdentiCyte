@@ -9,6 +9,7 @@
 """
 
 from tkinter import *
+import numpy as np
 from PIL import ImageTk, Image
 
 
@@ -31,7 +32,7 @@ class CellVerUI:
     """
     def __init__(self, window, image, typeArray):
         self.master = window
-        self.im = Image.fromarray(image)
+        self.im = Image.fromarray(image.astype("uint8"))
 
         # Options for the window
         window.attributes('-topmost', 1)
