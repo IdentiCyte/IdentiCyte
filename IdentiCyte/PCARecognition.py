@@ -109,7 +109,7 @@ def PCARecognition(inputData, resDict, userVer, library_dir, typeArray, pcThresh
     gallery = score[:, 0:pcNum]
 
     # Project the data onto the eigencells
-    features = np.matmul((inputData - np.matlib.repmat(meanV, testNum[0], 1)), eigenCells)
+    features = np.matmul((inputData - np.tile(meanV, (testNum[0], 1))), eigenCells)
 
     # Recognise the cells
     for k in range(testNum[0]):
@@ -123,7 +123,7 @@ def PCARecognition(inputData, resDict, userVer, library_dir, typeArray, pcThresh
             f = features[k]
 
             # Determine the distance of the cell from each of the eigencells in the library
-            dist = np.sum(np.power((np.matlib.repmat(f, trainNum, 1) - gallery), 2), axis=1)
+            dist = np.sum(np.power((np.tile(f, (trainNum, 1)) - gallery), 2), axis=1)
             idx = np.arange(0, len(dist), 1)
 
             # Sort the lists by distance, keeping track of the original positions
