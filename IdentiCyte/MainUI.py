@@ -96,7 +96,7 @@ class MainWindow():
 
         # Initialize window details - name and size
         master.title("IdentiCyte")
-        master.geometry("715x500")
+        master.geometry("785x500")
 
 ########Analysis Tab##########################################################
         # Create library selection

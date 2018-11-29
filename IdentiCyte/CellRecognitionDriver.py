@@ -132,6 +132,7 @@ def driver(l_dir,
                              color,
                              method,
                              cellSize,
+                             near,
                              bf)
             else:
                 window.printout('There were no images in the Input Folder.')
