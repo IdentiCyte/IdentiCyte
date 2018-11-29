@@ -1,6 +1,19 @@
 IdentiCyte/__pycache__
 venv/
 build/
-dist/
 IdentiCyte - Copy (2).spec
 IdentiCyte - Copy.spec
+IdentiCyte/win.png
+.idea/
+.gitignore
+setup (copy).py
+__pycache__/setup.cpython-36.pyc
+dist/IdentiCyte-1.0-py3-none-any.whl
+dist/IdentiCyte-1.0-py3.5.egg
+dist/IdentiCyte-1.0-py3.6.egg
+dist/IdentiCyte-1.0.tar.gz
+IdentiCyte.egg-info/dependency_links.txt
+IdentiCyte.egg-info/PKG-INFO
+IdentiCyte.egg-info/requires.txt
+IdentiCyte.egg-info/SOURCES.txt
+IdentiCyte.egg-info/top_level.txt
