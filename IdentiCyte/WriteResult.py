@@ -27,6 +27,7 @@ def WriteResults(stat,
                  color,
                  method,
                  cellSize,
+                 near,
                  bf):
     """
     Collects all the data from the analysis and writes it to an Excel spreadsheet
@@ -199,7 +200,8 @@ def WriteResults(stat,
                 'Minimum Cell Size',
                 'Confidence Percent',
                 'Principal Component Percent',
-                'Illumination']
+                'Illumination',
+                'Number of Similar Images Considered']
 
     yn = ['Disabled', 'Enabled']
     illum = ['Fluorescent', 'Bright Field']
@@ -212,7 +214,8 @@ def WriteResults(stat,
                    cellSize,
                    confThresh,
                    pcThresh,
-                   illum[bf]]
+                   illum[bf],
+                   near]
     row = 1
     for k in outStat:
         k.insert(3,' ')
