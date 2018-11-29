@@ -43,26 +43,26 @@ class detectTest(unittest.TestCase):
         greyarr = cv2.filter2D(tstarr, -1, kernel=kernel)
         greyarr = np.rint((greyarr)*255)
         shade = np.stack((greyarr,)*3, axis=-1)
-        with open('segmentTestKey', 'rb') as fp:
+        with open(os.path.join(os.path.dirname(__file__),'segmentTestKey'), 'rb') as fp:
             result = pickle.load(fp)
         np.testing.assert_array_equal(segment((tstarr*255).astype(np.uint8), shade.astype(np.uint8)), result)
 
     def testprocess(self):
-        img = cv2.imread(os.path.join(os.getcwd(), 'Cell Examples', 'Cell5.png'))
-        with open('ProcessTestKey', 'rb') as file:
+        img = cv2.imread(os.path.join(os.path.dirname(__file__), 'Cell5.png'))
+        with open(os.path.join(os.path.dirname(__file__),'processTestKey'), 'rb') as file:
             result = pickle.load(file)
         np.testing.assert_array_equal(process(img, 'B'), result)
-        with open('ProcessTestKeyGTriangle', 'rb') as file:
+        with open(os.path.join(os.path.dirname(__file__),'processTestKeyGTriangle'), 'rb') as file:
             GTriangleResult = pickle.load(file)
         np.testing.assert_array_equal(process(img, 'G', 'Triangle'), GTriangleResult)
 
-        img = cv2.imread(os.path.join(os.getcwd(), 'Cell Examples', 'Cell5Inv.png'))
-        with open('ProcessTestKeyInverted', 'rb') as file:
+        img = cv2.imread(os.path.join(os.path.dirname(__file__), 'Cell5Inv.png'))
+        with open(os.path.join(os.path.dirname(__file__), 'processTestKeyInverted'), 'rb') as file:
             FluoroResult = pickle.load(file)
         np.testing.assert_array_equal(process(img, bf=False), FluoroResult)
 
     def testdetect(self):
-        img = cv2.imread(os.path.join(os.getcwd(), 'Cell Examples', 'Cell5.png'))
+        img = cv2.imread(os.path.join(os.path.dirname(__file__), 'Cell5.png'))
         self.assertEqual(detect(img), [[109, 116]])
 
 
@@ -80,18 +80,18 @@ class cellStatisticsTest(unittest.TestCase):
 
 class toGreyScaleTest(unittest.TestCase):
     def testgrayalizw(self):
-        img = cv2.imread(os.path.join(os.getcwd(), 'Cell Examples', '1_2.tif'))
-        greyIm = cv2.imread(os.path.join(os.getcwd(), 'Cell Examples', '1_2Grey.tif'))
+        img = cv2.imread(os.path.join(os.path.dirname(__file__), '1_2.tif'))
+        greyIm = cv2.imread(os.path.join(os.path.dirname(__file__), '1_2Grey.tif'))
         np.testing.assert_array_equal(greyalize(img), greyIm[:, :, 0])
 
 
 class pcaRecognitionTest(unittest.TestCase):
     def testpcarecognition(self):
-        lib_file = os.path.join(os.getcwd(), 'Library', 'LibraryInfo.pkl')
+        lib_file = os.path.join(os.path.dirname(__file__), 'Library', 'LibraryInfo.pkl')
         with open(lib_file, 'rb') as f:
             resDict = pickle.load(f)
         types = ['BicEchinocytic', 'Biconcave', 'Echinocytic', 'Lysing', 'Other', 'SphEchinocytic', 'Spherocytic']
-        img = cv2.imread(os.path.join(os.getcwd(), 'Cell Examples', '1_2.tif'))
+        img = cv2.imread(os.path.join(os.path.dirname(__file__), '1_2.tif'))
         # Convert to greyscale by taking a  channel
         imLine = greyalize(img)
 
@@ -106,14 +106,14 @@ class pcaRecognitionTest(unittest.TestCase):
                             library_dir=os.path.split(lib_file)[0],
                             typeArray=types)
         self.assertEqual(classification, ['Spherocytic'])
-        # Have to round this or array([[94.57707456]]) != array([[94.57707456]])
-        self.assertEqual(np.round(conf, 8), np.round(np.asarray([[94.57707456]]), 8))
+        # Have to round this or array([[62.56521685]]) != array([[62.56521685]])
+        self.assertEqual(np.round(conf, 8), np.round(np.asarray([[62.56521685]]), 8))
 
 
 class processFilesTest(unittest.TestCase):
     def testprocessfiles(self):
-        imdir = os.path.join(os.getcwd(), 'Cell Examples')
-        libdir = os.path.join(os.getcwd(), 'Library')
+        imdir = os.path.join(os.path.dirname(__file__))
+        libdir = os.path.join(os.path.dirname(__file__), 'Library')
         types = ['BicEchinocytic', 'Biconcave', 'Echinocytic', 'Lysing', 'Other', 'SphEchinocytic', 'Spherocytic']
         [types, confs, locs] = ProcessFiles(libdir, imdir, types)
         self.assertEqual(locs, [[[155, 156]], [[156, 152]], [[99, 110]], []])
