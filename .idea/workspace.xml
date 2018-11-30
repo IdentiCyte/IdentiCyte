@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1afe4e3-c84c-49fc-9aea-c6542683e9a0" name="Default" comment="" />
+    <list default="true" id="d1afe4e3-c84c-49fc-9aea-c6542683e9a0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +16,7 @@
       <file leaf-file-name="MainUI.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IdentiCyte/MainUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10523">
+            <state relative-caret-position="272">
               <caret line="619" column="35" selection-start-line="619" selection-start-column="35" selection-end-line="619" selection-end-column="35" />
               <folding>
                 <element signature="e#241#271#0" expanded="true" />
@@ -26,7 +28,7 @@
       <file leaf-file-name="CellRecognitionDriver.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IdentiCyte/CellRecognitionDriver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2023">
+            <state relative-caret-position="1904">
               <caret line="119" column="39" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
               <folding>
                 <element signature="e#242#290#0" expanded="true" />
@@ -38,28 +40,22 @@
       <file leaf-file-name="DisplayIdentified.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IdentiCyte/DisplayIdentified.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1445">
+            <state relative-caret-position="17">
+      <file leaf-file-name="DisplayIdentified.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IdentiCyte/DisplayIdentified.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
               <caret line="90" column="55" selection-start-line="90" selection-start-column="55" selection-end-line="90" selection-end-column="55" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UnitTests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IdentiCyte/test/UnitTests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
-              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="case.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../Anaconda3/envs/Pyenv/Lib/unittest/case.py">
+      <file leaf-file-name="PCARecognition.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IdentiCyte/PCARecognition.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10047">
+            <state relative-caret-position="132">
               <caret line="604" selection-start-line="604" selection-end-line="604" />
             </state>
           </provider>
@@ -74,11 +70,39 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="PCARecognition.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IdentiCyte/PCARecognition.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="108" selection-start-line="108" selection-end-line="108" />
+              <folding>
+                <element signature="e#231#249#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConstructLibrary.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IdentiCyte/ConstructLibrary.py">
+            <state relative-caret-position="3315">
+              <caret line="199" column="36" selection-start-line="199" selection-start-column="36" selection-end-line="199" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file leaf-file-name="PCARecognition.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IdentiCyte/PCARecognition.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="277">
               <caret line="150" selection-start-line="150" selection-end-line="150" />
+=======
+      <file leaf-file-name="PCARecognition.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IdentiCyte/PCARecognition.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="108" selection-start-line="108" selection-end-line="108" />
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
               <folding>
                 <element signature="e#231#249#0" expanded="true" />
               </folding>
@@ -89,7 +113,11 @@
       <file leaf-file-name="ConstructLibrary.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IdentiCyte/ConstructLibrary.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1768">
+=======
+            <state relative-caret-position="1700">
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
               <caret line="104" column="11" selection-start-line="104" selection-start-column="11" selection-end-line="104" selection-end-column="11" />
               <folding>
                 <element signature="e#277#318#0" expanded="true" />
@@ -110,7 +138,11 @@
       <file leaf-file-name="ProcessFiles.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IdentiCyte/ProcessFiles.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="2074">
+=======
+            <state relative-caret-position="1921">
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
               <caret line="122" column="18" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
               <folding>
                 <element signature="e#249#258#0" expanded="true" />
@@ -161,9 +193,15 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="x" value="-10" />
     <option name="width" value="979" />
     <option name="height" value="1040" />
+=======
+    <option name="x" value="-9" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -212,7 +250,11 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Python.__main__">
+=======
+  <component name="RunManager" selected="Python.UnitTests">
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
     <configuration name="UnitTests" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="IdentiCyte" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -269,8 +311,12 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.__main__" />
         <item itemvalue="Python.UnitTests" />
+        <item itemvalue="Python.__main__" />
+<<<<<<< HEAD
+        <item itemvalue="Python.UnitTests" />
+=======
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
         <item itemvalue="Python tests.Unittests for UnitTests.processFilesTest.testprocessfiles" />
       </list>
     </recent_temporary>
@@ -294,6 +340,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.23087248" />
@@ -306,6 +353,21 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32905984" />
       <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3988604" />
       <window_info id="Favorites" order="0" side_tool="true" />
+=======
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.22751679" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32905984" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32763532" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32905984" />
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3988604" />
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -317,11 +379,16 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+<<<<<<< HEAD
+=======
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
       <window_info active="true" anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.16174497" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="10" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="6" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -329,6 +396,16 @@
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+=======
+      <window_info anchor="bottom" id="Run" order="6" />
+      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info anchor="bottom" id="Python Console" order="0" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="4" />
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="5" />
       <window_info anchor="bottom" id="Python Console" order="0" />
@@ -344,6 +421,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+<<<<<<< HEAD
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/IdentiCyte/PCARecognition.py</url>
@@ -357,52 +435,91 @@
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="12" />
+=======
+      <option name="time" value="8" />
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
+<<<<<<< HEAD
         <expression-string>colTypes[idx[9]]</expression-string>
+=======
+        <expression-string>latent</expression-string>
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+<<<<<<< HEAD
         <expression-string>colTypes[idx[8]]</expression-string>
+=======
+        <expression-string>np.matmul((inputData - np.tile(meanV, (testNum[0], 1))), eigenV)</expression-string>
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+<<<<<<< HEAD
         <expression-string>colTypes[idx[7]]</expression-string>
+=======
+        <expression-string>np.matmul((inputData - np.tile(meanV, (testNum[0], 1))), eigenCells)</expression-string>
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+<<<<<<< HEAD
         <expression-string>colTypes[idx[6]]</expression-string>
+=======
+        <expression-string>features = np.matmul((inputData - np.tile(meanV, (testNum[0], 1))), eigenCells)</expression-string>
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+<<<<<<< HEAD
         <expression-string>colTypes[idx[5]]</expression-string>
+=======
+        <expression-string>np.shape(eigenV[0]* latent)</expression-string>
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+<<<<<<< HEAD
         <expression-string>colTypes[idx[4]]</expression-string>
+=======
+        <expression-string>np.shape(eigenV[:,0]*latent)</expression-string>
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+<<<<<<< HEAD
         <expression-string>colTypes[idx[3]]</expression-string>
+=======
+        <expression-string>np.shape(eigenV[:,0])</expression-string>
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+<<<<<<< HEAD
         <expression-string>colTypes[idx[2]]</expression-string>
+=======
+        <expression-string>np.shape(eigenV*latent)</expression-string>
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+<<<<<<< HEAD
         <expression-string>colTypes[idx[1]]</expression-string>
+=======
+        <expression-string>np.shape(latent*eigenV)</expression-string>
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -488,6 +605,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IdentiCyte/ProcessFiles.py">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
@@ -509,6 +627,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
+=======
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IdentiCyte/ToGreyScale.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IdentiCyte/WriteResult.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IdentiCyte/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
         <state relative-caret-position="323">
           <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
         </state>
@@ -572,6 +713,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -592,6 +734,28 @@
         </state>
       </provider>
     </entry>
+=======
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IdentiCyte/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IdentiCyte/__main__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
     <entry file="file://$PROJECT_DIR$/IdentiCyte/CellDetection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -640,7 +804,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IdentiCyte/ConstructLibrary.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1768">
+=======
+        <state relative-caret-position="1700">
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
           <caret line="104" column="11" selection-start-line="104" selection-start-column="11" selection-end-line="104" selection-end-column="11" />
           <folding>
             <element signature="e#277#318#0" expanded="true" />
@@ -650,7 +818,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IdentiCyte/ProcessFiles.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="2074">
+=======
+        <state relative-caret-position="1921">
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
           <caret line="122" column="18" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
           <folding>
             <element signature="e#249#258#0" expanded="true" />
@@ -667,7 +839,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IdentiCyte/CellRecognitionDriver.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="2023">
+=======
+        <state relative-caret-position="1904">
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
           <caret line="119" column="39" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
           <folding>
             <element signature="e#242#290#0" expanded="true" />
@@ -677,14 +853,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IdentiCyte/DisplayIdentified.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1445">
+=======
+        <state relative-caret-position="17">
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
           <caret line="90" column="55" selection-start-line="90" selection-start-column="55" selection-end-line="90" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IdentiCyte/MainUI.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="10523">
+=======
+        <state relative-caret-position="272">
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
           <caret line="619" column="35" selection-start-line="619" selection-start-column="35" selection-end-line="619" selection-end-column="35" />
           <folding>
             <element signature="e#241#271#0" expanded="true" />
@@ -694,27 +878,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../Anaconda3/envs/Pyenv/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="10047">
+=======
+        <state relative-caret-position="132">
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
           <caret line="604" selection-start-line="604" selection-end-line="604" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/IdentiCyte/test/UnitTests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-9">
           <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/IdentiCyte/PCARecognition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="e#231#249#0" expanded="true" />
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/IdentiCyte/PCARecognition.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="150" selection-start-line="150" selection-end-line="150" />
           <folding>
             <element signature="e#231#249#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/IdentiCyte/test/UnitTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+>>>>>>> 4023e0d90988e447ad40e3325918a1e954b08245
           </folding>
         </state>
       </provider>
