@@ -14,9 +14,13 @@ from datetime import datetime
 import os
 import IdentiCyte.Globs as Globs
 import cv2
+from typing import List
 
 
-def findThresh(arr, level):
+def findThresh(arr,  # type: array[float]
+               level  # type: float
+               ):
+    # type: (array, float) -> int
     """
     Returns the first index in an array which is greater than a specified level.
 
@@ -39,7 +43,16 @@ def findThresh(arr, level):
     return -1
 
 
-def PCARecognition(inputData, resDict, userVer, library_dir, typeArray, pcThresh=90, confThresh=50, near=10):
+def PCARecognition(inputData,  # type: ndarray
+                   resDict,  # type: dict{str: array[float], str:ndarray, str:List[str], str:ndarray, str:ndarray}
+                   userVer,  # type: bool
+                   library_dir,  # type: str
+                   typeArray,  # type: list[str]
+                   pcThresh=90,  # type: Opional(float)
+                   confThresh=50,  # type: Opional(float)
+                   near=10  # type: Opional(int)
+                   ):
+    # type: (...) -> (List[str], ndarray)
     """
     Recognises cells
 
@@ -124,7 +137,7 @@ def PCARecognition(inputData, resDict, userVer, library_dir, typeArray, pcThresh
 
             # Determine the distance of the cell from each of the eigencells in the library
             dist = np.sum(np.power((np.tile(f, (trainNum, 1)) - gallery), 2), axis=1)
-            idx = np.arange(0, len(dist), 1)
+            idx = np.arange(0, len(dist), 1)  # type: list[int]
 
             # Sort the lists by distance, keeping track of the original positions
             dist, idx = ((list(t) for t in zip(*sorted(zip(dist, idx)))))

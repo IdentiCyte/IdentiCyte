@@ -9,7 +9,11 @@
 import numpy as np
 
 
-def greyalize(imArray, depth=3, colour='B'):
+def greyalize(imArray,  # type: ndarray
+              depth=3,  # type: Opional(int)
+              colour='B'  # type: Opional(str)
+              ):
+    # type: (...) -> ndarray
     """
         Converts an image into a greyscale version with a lower bit depth.
 

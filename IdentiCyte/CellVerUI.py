@@ -31,6 +31,7 @@ class CellVerUI:
     None, but self.type is referenced to determine what the user classified the cell as.
     """
     def __init__(self, window, image, typeArray):
+        # type: () -> None
         self.master = window
         self.im = Image.fromarray(image.astype("uint8"))
 
@@ -78,5 +79,6 @@ class CellVerUI:
 
     # Handle closing
     def ignored(self):
+        # type: () -> None
         self.type.set("Ignore")
         self.master.quit()

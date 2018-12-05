@@ -18,19 +18,21 @@ import pickle
 import gc
 import re
 
-def ProcessFiles(l_dir,
-                 pics_dir,
-                 typeArray,
-                 window=None,
-                 userVer=False,
-                 bits=3,
-                 color='B',
-                 method='Triangle',
-                 minSize=9000,
-                 pcThresh=90,
-                 confThresh=50,
-                 bf=True,
-                 near=10):
+def ProcessFiles(l_dir,  # type: str
+                 pics_dir,# type: str
+                 typeArray,  # type: List[str]
+                 window=None,  # type: Opional(MainWindow)
+                 userVer=False,  # type: Opional(bool)
+                 bits=3,  # type: Opional(int)
+                 color='B',# type: Opional(str)
+                 method='Triangle',# type: Opional(str)
+                 minSize=9000,  # type: Opional(int)
+                 pcThresh=90,  # type: Opional(float)
+                 confThresh=50,  # type: Opional(float)
+                 bf=True,  # type: Opional(bool)
+                 near=10  # type: Opional(int)
+                 ):
+    # type: (...) -> (List[List[str]], List[List[float]], List[List[int]])
     """
     Reads in images and prepares them for analysis.
 

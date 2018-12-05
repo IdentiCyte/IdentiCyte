@@ -9,7 +9,10 @@
 """
 import numpy as np
 
-def CellStats(cellData, typeArray):
+def CellStats(cellData, # type: List[List[str]]
+              typeArray  # type: List[str]
+              ):
+    # type: (List[List[str]], List[str]) -> List[List[float]]
     """
     Compiles the data from the analysis.
 

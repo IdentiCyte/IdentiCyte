@@ -27,6 +27,7 @@ class MainWindow():
     The main window of the program.
     """
     def __init__(self, master):
+        # type: (Tk) -> None
         self.master = master
         self.userVer = BooleanVar()
         self.color = StringVar()
@@ -335,6 +336,7 @@ class MainWindow():
         self.printout("Welcome to IdentiCyte version " + self.version)
     # Choose the input
     def chooseDir(self, var):
+        # type: (StringVar) -> None
         """
         Brings up a window select for a directory
         Parameters
@@ -356,6 +358,7 @@ class MainWindow():
         var.set(os.path.abspath(var.get()))
 
     def chooseImg(self, var):
+        # type: (StringVar) -> None
         """
         Brings up a window select for an image
         Parameters
@@ -380,6 +383,7 @@ class MainWindow():
         var.set(os.path.abspath(var.get()))
 
     def chooseLibDir(self, var):
+        # type: (StringVar) -> None
         """
         Brings up a window select for a library directory
         Parameters
@@ -400,6 +404,7 @@ class MainWindow():
 
     # Extract the Cells from images
     def exCells(self):
+        # type: () -> None
         """
         Extracts the cells from an image to be used as examples in the library.
         """
@@ -430,6 +435,7 @@ class MainWindow():
             self.printout(traceback.format_exc())
 
     def runRecognition(self):
+        # type: () -> None
         """
         Runs the analysis on a specified folder
         """
@@ -473,6 +479,7 @@ class MainWindow():
 
     # Displays text in the window's output box
     def printout(self, string):
+        # type: () -> None
         """
         Prints a string to the text box in the main window.
         Parameters
@@ -491,6 +498,7 @@ class MainWindow():
         self.outbox.config(state=DISABLED)
 
     def compileLibrary(self):
+        # type: () -> None
         """
         Compiles the library file from the images in the library directory.
         """
@@ -510,6 +518,7 @@ class MainWindow():
     # Ensure entries into percentage fields are valid
     def validatePerc(self, action, index, value_if_allowed,
                        prior_value, text, validation_type, trigger_type, widget_name):
+        # type: (...) -> None
         """
         Validate a percentage in an input box.
 
@@ -555,6 +564,7 @@ class MainWindow():
     # Ensure entries in numerical fields are valid
     def validateSize(self, action, index, value_if_allowed,
                  prior_value, text, validation_type, trigger_type, widget_name):
+        # type: (...) -> None
         """
         Validate an integer in an input box.
 
@@ -598,6 +608,7 @@ class MainWindow():
             return True
 
     def cancel(self):
+        # type: (...) -> None
         """
         Terminate execution as soon as possible.
         """
@@ -605,6 +616,7 @@ class MainWindow():
 
     # Review Classified Cells
     def check(self):
+        # type: () -> None
         """
         Brings up the review window to check a batch of analyzed images.
         """

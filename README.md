@@ -1,5 +1,5 @@
 # IdentiCyte
-IdentiCyte is a program which has been designed to count and classify cells in an image microscopy image as simply as possible. 
+IdentiCyte is a program which has been designed to count and classify cells in an image microscopy image with a focus on ease of use.
 ## Getting Started 
 
 Identicyte has been tested on Windows 10, Windows 7 and Ubuntu 17.10
@@ -11,7 +11,7 @@ Once the file has been downloaded, and you have read the manual, IdentiCyte can 
 
 ## How to cite
 If you use IdentiCyte in your research, please cite the following journal article:
-G. F. G. Garnier, C. A. Manderson, S. Giri, G. Garnier, Identicyte: Simple red blood cell identification software, SoftwareX (2019) [pages].
+G. F. G. Garnier, C. A. Manderson, S. Giri, G. Garnier, Identicyte: Simple red blood cell identification software, SoftwareX (2019?) [pages].
 
     @article{identicyte,  
     title={IdentiCyte: Simple Red Blood Cell Identification Software},  
@@ -27,7 +27,7 @@ G. F. G. Garnier, C. A. Manderson, S. Giri, G. Garnier, Identicyte: Simple red b
 
 To download IdentiCyte either click the green 'Clone or download' button and download zip, then extract the contents into a convenient directory.
 
-Using git, copy the command below into the command line
+Alternatively, for git, copy the command below into the command line
 > git clone https://github.com/IdentiCyte/IdentiCyte.git \path\to\destination
 
 #### Requirements and Dependencies

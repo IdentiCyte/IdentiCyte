@@ -11,11 +11,14 @@ import cv2
 from scipy.ndimage.morphology import binary_fill_holes
 import numpy as np
 
-def detect(image,
-           channel='B',
-           method='Otsu',
-           minSize=9000,
-           bf=True):
+
+def detect(image,  # type: ndarray
+           channel='B',  # type: Opional(str)
+           method='Otsu',  # type: Opional(str)
+           minSize=9000,  # type: Opional(int)
+           bf=True  # type: Opional(bool)
+           ):
+    # type: (...) -> List[List[int]]
     """
     Detects cells in an image
 
@@ -49,10 +52,12 @@ def detect(image,
     return imInfo
 
 
-def process(image,
-            channel='B',
-            method='Otsu',
-            bf=True):
+def process(image,  # type: ndarray
+            channel='B',  # type: Opional(str)
+            method='Otsu',  # type: Opional(str)
+            bf=True  # type: Opional(bool)
+            ):
+    # type: (...) -> ndarray
     """
     Separates cells from the background of the image.
 
@@ -122,7 +127,10 @@ def process(image,
     return outim
 
 
-def segment(img, image):
+def segment(img,  # type: ndarray
+            image  # type: ndarray
+            ):
+    # type: (ndarray, ndarray) -> ndarray
     """
     Separates cells from the background of the image.
 
@@ -171,7 +179,10 @@ def segment(img, image):
     return markers
 
 
-def analyze(segIm, minSize):
+def analyze(segIm,  # type: ndarray
+            minSize  # type: int
+            ):
+    # type: (ndarray, int) -> List[List[int]]
     """
     Counts the segmented cells in an image
 
@@ -180,11 +191,12 @@ def analyze(segIm, minSize):
 
     Parameters
     ----------
-    minSize : int
-        The minimum number of pixels in a blob for it to be considered a cell and not small debris.
     segIm : ndarray
         An array of the same size as the input image. The elements along the edge have a value -1, the background
         of the image is 1 and each detected cell has a unique positive integer value.
+    minSize : int
+        The minimum number of pixels in a blob for it to be considered a cell and not small debris.
+
 
     Returns
     -------

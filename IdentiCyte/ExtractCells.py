@@ -15,8 +15,19 @@ from IdentiCyte.CellDetection import detect
 import IdentiCyte.Globs as Globs
 import re
 
+
 # Takes cells out of images for building the library
-def ExCells(im_dir, lib_dir, window=None, bits=3, color='B', method='Otsu', minSize=9000, bf=True, radius=155):
+def ExCells(im_dir,  # type: str
+            lib_dir,  # type: str
+            window=None,   # type: Opional(MainWindow)
+            bits=3,   # type: Opional(int)
+            color='B',  # type: Opional(str)
+            method='Otsu',  # type: Opional(str)
+            minSize=9000,  # type: Opional(int)
+            bf=True,  # type: Opional(bool)
+            radius=155  # type: Opional(int)
+            ):
+    # type: (...) -> None
     """
     Extracts cells from images in a folder for use in the library.
 

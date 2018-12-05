@@ -13,7 +13,11 @@ import cv2
 import pickle
 import IdentiCyte.Globs as Globs
 
-def display(img_file, window=None):
+
+def display(img_file,  # type: str
+            window=None  # type: Optional(MainWindow)
+            ):
+    # type: (str, Optional(MainWindow)) -> None
     """
     Displays images with classified cells.
 
@@ -139,7 +143,11 @@ def display(img_file, window=None):
             imNum = imNum + 1
     cv2.destroyWindow(windName)
 
-def gcd(x,y):
+
+def gcd(x, # type: int
+        y  # type: int
+        ):
+    # type: (int) -> int
     """
     Calcualtes the gcd of 2 numbers.
 

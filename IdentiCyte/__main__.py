@@ -6,7 +6,6 @@
    Python Version 3.5
    Description: The main document of the project. Runs everything else.
 """
-#import matplotlib.pyplot as plt
 from tkinter import Tk
 from mttkinter import *
 from IdentiCyte.MainUI import MainWindow

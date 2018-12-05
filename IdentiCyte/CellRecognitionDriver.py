@@ -16,18 +16,20 @@ import numpy as np
 import os
 import timeit
 
-def driver(l_dir,
-           pics_dir,
-           window=None,
-           userver=False,
-           bits=3,
-           color='B',
-           method='Triangle',
-           cellSize=9000,
-           pcThresh=90,
-           confThresh=50,
-           bf=True,
-           near=10):
+def driver(l_dir,  # type: str
+           pics_dir,  # type: str
+           window=None,  # type: Opional(MainWindow)
+           userver=False,  # type: Opional(bool)
+           bits=3,  # type: Opional(int)
+           color='B',  # type: Opional(str)
+           method='Triangle',  # type: Opional(str)
+           cellSize=9000,  # type: Opional(int)
+           pcThresh=90,  # type: Opional(float)
+           confThresh=50,  # type: Opional(float)
+           bf=True,  # type: Opional(bool)
+           near=10  # type: Opional(int)
+           ):
+    # type: (...) -> None
     """
     Drives the analysis
 

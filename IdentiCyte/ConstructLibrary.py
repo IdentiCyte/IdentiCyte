@@ -14,7 +14,10 @@ import matplotlib.pyplot as plt
 import pickle
 
 
-def compileLibrary(l_dir, window=None):
+def compileLibrary(l_dir,  # type: str
+                   window=None  # type: Optional(MainWindow)
+                   ):
+    # type: (str, Optional(MainWindow)) -> None
     """
     Compiles the images in the library folder into a LibraryInfo.pkl with relevant information.
 

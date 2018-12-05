@@ -14,21 +14,23 @@ import re
 
 
 def WriteResults(stat,
-                 typeArray,
-                 locations,
-                 pics_dir,
-                 l_dir,
-                 results,
-                 conf,
-                 pcThresh,
-                 confThresh,
-                 userver,
-                 bits,
-                 color,
-                 method,
-                 cellSize,
-                 near,
-                 bf):
+                 typeArray,  # type: List[str]
+                 locations,  # type: List[List[int]]
+                 pics_dir,  # type: str
+                 l_dir,  # type: str
+                 results,  # type: List[List[str]]
+                 conf,  # type: List[ndarray]
+                 pcThresh,  # type: float
+                 confThresh,  # type: float
+                 userver,  # type: bool
+                 bits,  # type: int
+                 color,  # type: str
+                 method,  # type: str
+                 cellSize,  # type: int
+                 near,  # type: int
+                 bf  # type: bool
+                 ):
+    # type: (...) -> None
     """
     Collects all the data from the analysis and writes it to an Excel spreadsheet
 
@@ -59,8 +61,6 @@ def WriteResults(stat,
     confThresh : float
         The confidence level a cell must have for it to be automatically classified. This is a percentage nd should be
         between 0 and 100 inclusive.
-        l_dir : str
-        A string of the directory path to the library
     userver : bool
         Enables(True) or disables(False) the user verification popup window.
     bits : int
