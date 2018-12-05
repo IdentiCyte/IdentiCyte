@@ -54,7 +54,7 @@ def compileLibrary(l_dir,  # type: str
         imageList = os.listdir(curr_dir)
 
         # Discard all entries that are not TIFF images
-        for file in range(len(imageList)):
+        for file in range(len(imageList)-1, -1, -1):
             if not imageList[file].endswith('.tif'):
                 imageList.pop(file)
 

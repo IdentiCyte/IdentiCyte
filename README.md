@@ -31,7 +31,7 @@ Alternatively, for git, copy the command below into the command line
 > git clone https://github.com/IdentiCyte/IdentiCyte.git \path\to\destination
 
 #### Requirements and Dependencies
-If you wish to modify and run Identicyte you will require Python 3.5 or later and the following packages:
+If you wish to modify and run Identicyte you will require 64-bit Python 3.5 or later and the following packages:
 
 + numpy
 + scipy
