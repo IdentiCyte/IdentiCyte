@@ -7,13 +7,13 @@ To download the software, enter the dist folder above, then click on IdentiCyte.
 
 The manual contains instructions for using IdentiCyte and can be found in the Manual folder. 
 
-###Running IdentiCyte
+### Running IdentiCyte
 Once the file has been downloaded, and you have read the manual, IdentiCyte can be run by double clicking IdentiCyte.exe. If you get a popup saying that an unauthorised app was prevented from starting, then click Run anyway.
 
 ## How to cite
 If you use IdentiCyte in your research, please cite the following journal article:
 
-G. F. G. Garnier, C. A. Manderson, S. Giri, G. Garnier, IdentiCyte: Simple red blood cell identification software, [in press].
+G. F. G. Garnier, C. A. Manderson, S. Giri, G. Garnier, IdentiCyte: Simple red blood cell identification software; SoftwareX [In Press].
 
 ## Development and Contributing to IdentiCyte
 
@@ -26,7 +26,7 @@ To download the source code of IdentiCyte either click the green 'Clone or downl
 Alternatively, to download with git from the command line, copy the command below into the command line and change the path to destination to the directory where you wish to download IdentiCyte.
 > git clone https://github.com/IdentiCyte/IdentiCyte.git \path\to\destination
 
-###Installing
+### Installing
 IdentiCyte has been written in Pythin and requires a 64 bit Python 3.5 installation. To set up and run Identicyte from the command line, follow the instrictions below.
  
 Install setuptools if it isn't already installed
@@ -40,7 +40,7 @@ IdentiCyte can then be run with the command
 > python IdentiCyte
 
 #### Requirements and Dependencies
-If you wish to modify and run IdentiCyte you will require 64-bit Python 3.5 or later and the following packages:
+If you wish to modify and run IdentiCyte you will require 64-bit Python 3.5 or later and the following packages (If IdentiCyte has been installed as above, then these should already be installed.):
 
 + numpy
 + scipy
@@ -66,7 +66,7 @@ Navigate to the folder which contains the file 'Identicyte.spec', and if you are
 
 > pyinstaller IdentiCyte.spec
 
-Or if you are on linux, theninstead run the command
+Or if you are on linux, then instead run the command
 
 > pyinstaller IdentiCyte_linux.spec
 
