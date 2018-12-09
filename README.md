@@ -34,7 +34,7 @@ Install setuptools if it isn't already installed
 
 Navigate to the folder containing setup.py 
 
-> pip install setup.py
+> pip install -e .
 
 IdentiCyte can then be run with the command
 > python IdentiCyte
