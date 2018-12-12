@@ -10,6 +10,7 @@
 from sklearn import decomposition as skde
 import numpy as np
 import os
+import matplotlib; matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
 import pickle
 
