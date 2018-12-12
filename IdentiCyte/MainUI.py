@@ -20,6 +20,7 @@ import traceback
 from threading import Thread
 import IdentiCyte.Globs as Globs
 from IdentiCyte.DisplayIdentified import display
+from IdentiCyte.FolderBatch import batch
 
 
 class MainWindow():
@@ -39,6 +40,7 @@ class MainWindow():
         self.cellSize = IntVar()
         self.cellRadius = IntVar()
         self.brigthfield = BooleanVar()
+        self.batch = BooleanVar()
         self.thread = Thread()
         self.dispThread = Thread()
         self.near = IntVar()
@@ -53,6 +55,7 @@ class MainWindow():
         self.method.set('Otsu')
         self.cellSize.set(9000)
         self.brigthfield.set(True)
+        self.batch.set(True)
         self.cellRadius.set(155)
         self.near.set(10)
 
@@ -70,8 +73,10 @@ class MainWindow():
         # Default folders
         self.lib = StringVar()
         self.lib.set(os.path.join(os.getcwd(), 'Library'))
+        self.lib.set('D:\\IdentiCyte\\Library')
         self.infile = StringVar()
         self.infile.set(os.getcwd())
+        self.infile.set('D:\\IdentiCyte\\Image Samples')
 
         # Define some frames for positioning
         self.top = Frame(self.main_)
@@ -143,6 +148,9 @@ class MainWindow():
         # Run Recognition
         self.recognise = Button(master, text="Identify Cells", command=lambda: self.runRecognition())
         self.recognise.pack(in_=self.bot, side=TOP)
+        # # Run Batch Recognition
+        # self.batch_recognise = Button(master, text="Batch Identify", command=lambda: self.runBatch())
+        # self.batch_recognise.pack(in_=self.bot, side=TOP)
 ########Review Tab##################################################################################
 
         # Create input selection
@@ -311,6 +319,16 @@ class MainWindow():
         self.illumBF.pack(side=TOP)
         self.illumFl.pack(side=TOP)
 
+        # Batch Selecting Frame
+        self.batchLabel = LabelFrame(self.options_, text='Recursive Batch')
+        self.batchLabel.pack(in_=self.optsFrame, side=RIGHT)
+        # Method selecting radio buttons
+        self.batchY = Radiobutton(self.batchLabel, text="Yes", variable=self.batch, value=True)
+        self.batchN = Radiobutton(self.batchLabel, text="No", variable=self.batch, value=False)
+
+        self.batchY.pack(side=TOP)
+        self.batchN.pack(side=TOP)
+
         # Dropdown Menu
         self.bitFrame = Frame(master)
         self.bitFrame.pack(in_=self.options_, side=BOTTOM)
@@ -440,6 +458,7 @@ class MainWindow():
         Runs the analysis on a specified folder
         """
         Globs.end = False
+        Globs.batchEnd = False
         if (not self.thread.isAlive()) and (not Globs.end):
             lib_dir = self.lib.get()
             pcs = self.pcThresh.get()
@@ -460,22 +479,81 @@ class MainWindow():
                 self.printout('Please select a library folder.')
             if not Globs.end:
                 self.printout('Getting Pictures from: ' + str(self.infile.get()))
-                self.thread = Thread(target=driver,
-                                     args=(lib_dir,
-                                           pic_dir,
-                                           self,
-                                           verification,
-                                           depth,
-                                           col,
-                                           meth,
-                                           cellSize,
-                                           pcs,
-                                           confLev,
-                                           bf,
-                                           near))
+                if self.batch.get():
+                    self.thread = Thread(target=batch,
+                                         args=(lib_dir,
+                                               pic_dir,
+                                               self,
+                                               verification,
+                                               depth,
+                                               col,
+                                               meth,
+                                               cellSize,
+                                               pcs,
+                                               confLev,
+                                               bf,
+                                               near))
+                else:
+                    self.thread = Thread(target=driver,
+                                         args=(lib_dir,
+                                               pic_dir,
+                                               self,
+                                               verification,
+                                               depth,
+                                               col,
+                                               meth,
+                                               cellSize,
+                                               pcs,
+                                               confLev,
+                                               bf,
+                                               near))
                 self.thread.start()
         else:
             self.printout('The program is currently busy.')
+
+    # def runBatch(self):
+    #     # type: () -> None
+    #     """
+    #     Runs the analysis on a specified folder
+    #     """
+    #     Globs.end = False
+    #     Globs.batchEnd = False
+    #     if (not self.thread.isAlive()) and (not Globs.end):
+    #         lib_dir = self.lib.get()
+    #         pcs = self.pcThresh.get()
+    #         confLev = self.confThresh.get()
+    #         pic_dir = self.infile.get()
+    #         verification = self.userVer.get()
+    #         depth = self.bits.get()
+    #         col = self.color.get()
+    #         meth=self.method.get()
+    #         cellSize=self.cellSize.get()
+    #         bf = self.brigthfield.get()
+    #         near = self.near.get()
+    #         if not os.path.exists(pic_dir):
+    #             Globs.end = True
+    #             self.printout('Please select an input folder.')
+    #         if not os.path.exists(lib_dir):
+    #             Globs.end = True
+    #             self.printout('Please select a library folder.')
+    #         if not Globs.end:
+    #             self.printout('Getting Pictures from: ' + str(self.infile.get()))
+    #             self.thread = Thread(target=batch,
+    #                                  args=(lib_dir,
+    #                                        pic_dir,
+    #                                        self,
+    #                                        verification,
+    #                                        depth,
+    #                                        col,
+    #                                        meth,
+    #                                        cellSize,
+    #                                        pcs,
+    #                                        confLev,
+    #                                        bf,
+    #                                        near))
+    #             self.thread.start()
+    #     else:
+    #         self.printout('The program is currently busy.')
 
     # Displays text in the window's output box
     def printout(self, string):
@@ -613,6 +691,7 @@ class MainWindow():
         Terminate execution as soon as possible.
         """
         Globs.end = True
+        Globs.batchEnd = True
 
     # Review Classified Cells
     def check(self):

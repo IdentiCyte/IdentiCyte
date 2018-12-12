@@ -92,6 +92,8 @@ def ProcessFiles(l_dir,  # type: str
         if os.path.isdir(os.path.join(pics_dir, img_names[entry])) or not an_image:
             img_names.pop(entry)
 
+    if not img_names:
+        Globs.end = True
     imgNum = len(img_names)
 
     cellTypes = [[]]*imgNum

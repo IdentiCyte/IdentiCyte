@@ -7,4 +7,6 @@
    Description: Holds the end stop variable.
 """
 global end
+global batchEnd
 end = False
+batchEnd = False

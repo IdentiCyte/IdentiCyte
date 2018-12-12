@@ -69,6 +69,8 @@ def driver(l_dir,  # type: str
 
     file_name = os.path.join(pics_dir, os.path.split(pics_dir)[-1] + '.xlsx')
 
+    Globs.end = False
+
     # Check to see if the book can be opened
     try:
         workbook = xlsxwriter.Workbook(file_name)
