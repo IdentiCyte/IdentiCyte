@@ -1,5 +1,13 @@
+"""
+   File Name: CellRecognitionDriver.py
+   Version: 1.0
+   Author: Guillaume Garnier
+   Date Modified: 2018-12-13
+   License: GNU-GPL-3.0-or-later
+   Python Version 3.5
+   Description: Recursively performs analysis on folders and subfolders
+"""
 import os
-import sys
 import IdentiCyte.Globs as Globs
 from IdentiCyte.CellRecognitionDriver import driver
 
@@ -17,7 +25,42 @@ def batch(l_dir,  # type: str
            bf=True,  # type: Opional(bool)
            near=10  # type: Opional(int)
            ):
-    folders = []
+    # type: (...) -> None
+    """
+    Drives the analysis
+
+    This detects the cell categories in the library and runs both the analysis ant the output file writing.
+
+    Parameters
+    ----------
+    l_dir : str
+        A string of the directory path to the library
+    pics_dirs : str
+        A string of the directory path to the folders containing the images to be analysed
+    window : MainWindow
+        The main GUI window
+    userver : bool
+        Enables(True) or disables(False) the user verification popup window.
+    bits : int
+        The bit depth of the cells when analysing. there will be  2^depth levels of grey in the result. Valid values are
+        between 1 and 8 inclusive.
+    color : str
+        The colour channel that will be inspected, ignored if analyzing grey scale images
+    method : str
+        The algorithm used to threshold the image into binary when detecting cells. Either 'Otsu' or 'Triangle'.
+    cellSize : int
+        The minimum number of pixels in a blob for it to be considered a cell and not small debris.
+    pcThresh : float
+        A percentage value of which proportion of principal components are used to compare a cell to the library. Valid
+        values are between 0 and 100 inclusive.
+    confThresh : float
+        The confidence level a cell must have for it to be automatically classified. This is a percentage nd should be
+        between 0 and 100 inclusive.
+    bf : bool
+        Indicates whether the image is bright field(True) or fluorescent(False)
+    near : int
+        The number of nearest neighbours in the library that will be considered when classifying a cell
+   """
     for item in os.listdir(pics_dirs):
         if os.path.isdir(os.path.join(pics_dirs, item)) and not item == 'Labelled' and not Globs.batchEnd:
             batch(l_dir,  # type: str
