@@ -73,10 +73,8 @@ class MainWindow():
         # Default folders
         self.lib = StringVar()
         self.lib.set(os.path.join(os.getcwd(), 'Library'))
-        self.lib.set('D:\\IdentiCyte\\Library')
         self.infile = StringVar()
         self.infile.set(os.getcwd())
-        self.infile.set('D:\\IdentiCyte\\Image Samples')
 
         # Define some frames for positioning
         self.top = Frame(self.main_)

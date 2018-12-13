@@ -20,7 +20,6 @@ def batch(l_dir,  # type: str
     folders = []
     for item in os.listdir(pics_dirs):
         if os.path.isdir(os.path.join(pics_dirs, item)) and not item == 'Labelled' and not Globs.batchEnd:
-            window.printout('Batching ' + item)
             batch(l_dir,  # type: str
                   os.path.join(os.path.join(pics_dirs, item)),  # type: str
                   window=window,  # type: Opional(MainWindow)
