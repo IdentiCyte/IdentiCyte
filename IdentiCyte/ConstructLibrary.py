@@ -2,7 +2,7 @@
    File Name: ConstructLibrary.py
    Version: 1.0
    Author: Guillaume Garnier
-   Date Modified: 2018-11-21
+   Date Modified: 2018-12-13
    License: GNU-GPL-3.0-or-later
    Python Version 3.5
    Description: Compiles all the images in the library into a single pickle file for use in the analysis.

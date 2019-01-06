@@ -2,7 +2,7 @@
    File Name: ProcessFiles.py
    Version: 1.0
    Author: Guillaume Garnier
-   Date Modified: 2018-11-21
+   Date Modified: 2019-01-07
    License: GNU-GPL-3.0-or-later
    Python Version 3.5
    Description: Collects the results from the detection and recognition of cells.
@@ -180,5 +180,6 @@ def ProcessFiles(l_dir,  # type: str
             window.printout('The library has not been compiled. Either compile the library or select a folder with a '
                             'library that has been compiled.')
             Globs.end = True
+            Globs.batchEnd = True
             return 0, 0, 0
 

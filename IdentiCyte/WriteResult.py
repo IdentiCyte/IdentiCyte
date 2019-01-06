@@ -1,7 +1,7 @@
 """
    File Name: WriteResults.py
    Author: Guillaume Garnier
-   Date Modified: 2018-11-21
+   Date Modified: 2019-01-07
    License: GNU-GPL-3.0-or-later
    Python Version 3.5
    Description: Writes the results of the analysis to the summary Excel sheet and pickle file
@@ -85,7 +85,7 @@ def WriteResults(stat,
 
     for j in range(len(results)):
         for k in range(len(results[j])):
-            results[j][k] = [results[j][k], ' %.1lf %%' % conf[j][k], [int(locations[j][k][0]), int(locations[j][k][1])]]
+            results[j][k] = [results[j][k], ' %.1lf%%' % conf[j][k], [int(locations[j][k][0]), int(locations[j][k][1])]]
 
     # Make the file's name
     dataName = os.path.split(pics_dir)[-1]
@@ -118,7 +118,7 @@ def WriteResults(stat,
     conf = np.insert(conf, 0, np.mean(conf))
 
     # Complete the confidence column
-    confStr = ['%.1lf %%' % np.mean(conf[lst]) for lst in range(len(conf))]
+    confStr = ['%.1lf%%' % np.mean(conf[lst]) for lst in range(len(conf))]
     confStr.insert(0, 'Confidence Per Image')
 
     # Calculate the total number of cells in each image
@@ -150,17 +150,17 @@ def WriteResults(stat,
     for j in range(len(outStat)):
         outStat[j] = outStat[j].tolist()
 
-    # Convert the output stats to percentage strings
+    # Convert the output stats to strings
     for j in range(len(outStat)):
         for k in range(1, len(outStat[0])):
-            outStat[j][k] = '%.1lf %%' % outStat[j][k]
+            outStat[j][k] = '%.1lf%%' % outStat[j][k]
 
     # Add the percentage of each type of cell counted
     for j in range(len(outStat)):
         if totalNums[2] > 0:
-            outStat[j].insert(1, '%.1lf %%' % (outStat[j][0]*100/totalNums[2]))
+            outStat[j].insert(1, '%.1lf' % (outStat[j][0]*100/totalNums[2]))
         else:
-            outStat[j].insert(1, '0 %%')
+            outStat[j].insert(1, '0')
         outStat[j].insert(0, typeArray[j])
     outStat[-1][2] = '-'
     outStat[-2][2] = '-'

@@ -1,7 +1,7 @@
 """
    File Name: DisplayIdentified.py
    Author: Guillaume Garnier
-   Date Modified: 2018-11-21
+   Date Modified: 2018-12-13
    License: GNU-GPL-3.0-or-later
    Python Version 3.5
    Description: Displays the analysed images overlayed with cell classifications

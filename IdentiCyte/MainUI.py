@@ -2,7 +2,7 @@
    File Name: MainUI.py
    Version: 1.0
    Author: Guillaume Garnier
-   Date Modified: 2018-11-21
+   Date Modified: 2018-13-12
    License: GNU-GPL-3.0-or-later
    Python Version 3.5
    Description: Handles the main GUI window and calls all the other functions.
