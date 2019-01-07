@@ -176,10 +176,18 @@ def ProcessFiles(l_dir,  # type: str
             locations.append(imInfo)
         return cellTypes, cellConf, locations
     else:
-        if window:
-            window.printout('The library has not been compiled. Either compile the library or select a folder with a '
-                            'library that has been compiled.')
-            Globs.end = True
-            Globs.batchEnd = True
-            return 0, 0, 0
+
+        if not os.path.isfile(lib_file):
+            if window:
+                window.printout('The library has not been compiled. Either compile the library or select a folder with a '
+                                'library that has been compiled.')
+                Globs.end = True
+                Globs.batchEnd = True
+                return 0, 0, 0
+        else:
+            if window:
+                window.printout('Analysis halted for: ' + pics_dir)
+                Globs.end = True
+                return 0,0,0
+
 
