@@ -2,7 +2,7 @@
    File Name: CellRecognitionDriver.py
    Version: 1.0
    Author: Guillaume Garnier
-   Date Modified: 2019-01-07
+   Date Modified: 2019-01-31
    License: GNU-GPL-3.0-or-later
    Python Version 3.5
    Description: Recursively performs analysis on folders and subfolders
@@ -69,15 +69,15 @@ def batch(l_dir,  # type: str
     driver(l_dir,  # type: str
            pics_dirs,  # type: str
            window=window,  # type: Opional(MainWindow)
-           userver=False,  # type: Opional(bool)
-           bits=3,  # type: Opional(int)
-           color='B',  # type: Opional(str)
-           method='Triangle',  # type: Opional(str)
-           cellSize=9000,  # type: Opional(int)
-           pcThresh=90,  # type: Opional(float)
-           confThresh=50,  # type: Opional(float)
-           bf=True,  # type: Opional(bool)
-           near=10  # type: Opional(int)
+           userver=userver,  # type: Opional(bool)
+           bits=bits,  # type: Opional(int)
+           color=color,  # type: Opional(str)
+           method=method,  # type: Opional(str)
+           cellSize=cellSize,  # type: Opional(int)
+           pcThresh=pcThresh,  # type: Opional(float)
+           confThresh=confThresh,  # type: Opional(float)
+           bf=bf,  # type: Opional(bool)
+           near=near  # type: Opional(int)
            )
     for item in os.listdir(pics_dirs):
         if os.path.isdir(os.path.join(pics_dirs, item)) and not item == 'Labelled' and not Globs.batchEnd:
@@ -86,27 +86,27 @@ def batch(l_dir,  # type: str
                 batch(l_dir,  # type: str
                       os.path.join(os.path.join(pics_dirs, item)),  # type: str
                       window=window,  # type: Opional(MainWindow)
-                      userver=False,  # type: Opional(bool)
-                      bits=3,  # type: Opional(int)
-                      color='B',  # type: Opional(str)
-                      method='Triangle',  # type: Opional(str)
-                      cellSize=9000,  # type: Opional(int)
-                      pcThresh=90,  # type: Opional(float)
-                      confThresh=50,  # type: Opional(float)
-                      bf=True,  # type: Opional(bool)
-                      near=10,  # type: Opional(int)
+                      userver=userver,  # type: Opional(bool)
+                      bits=bits,  # type: Opional(int)
+                      color=color,  # type: Opional(str)
+                      method=method,  # type: Opional(str)
+                      cellSize=cellSize,  # type: Opional(int)
+                      pcThresh=pcThresh,  # type: Opional(float)
+                      confThresh=confThresh,  # type: Opional(float)
+                      bf=bf,  # type: Opional(bool)
+                      near=near,  # type: Opional(int)
                       depth=depth+1)  # type: Optional(int)
 
             driver(l_dir,  # type: str
                    os.path.join(os.path.join(pics_dirs, item)),  # type: str
                    window=window,  # type: Opional(MainWindow)
-                   userver=False,  # type: Opional(bool)
-                   bits=3,  # type: Opional(int)
-                   color='B',  # type: Opional(str)
-                   method='Triangle',  # type: Opional(str)
-                   cellSize=9000,  # type: Opional(int)
-                   pcThresh=90,  # type: Opional(float)
-                   confThresh=50,  # type: Opional(float)
-                   bf=True,  # type: Opional(bool)
-                   near=10  # type: Opional(int)
+                   userver=userver,  # type: Opional(bool)
+                   bits=bits,  # type: Opional(int)
+                   color=color,  # type: Opional(str)
+                   method=method,  # type: Opional(str)
+                   cellSize=cellSize,  # type: Opional(int)
+                   pcThresh=pcThresh,  # type: Opional(float)
+                   confThresh=confThresh,  # type: Opional(float)
+                   bf=bf,  # type: Opional(bool)
+                   near=near  # type: Opional(int)
                    )
