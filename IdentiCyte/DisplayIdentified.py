@@ -1,7 +1,7 @@
 """
    File Name: DisplayIdentified.py
    Author: Guillaume Garnier
-   Date Modified: 2018-12-13
+   Date Modified: 2019-02-01
    License: GNU-GPL-3.0-or-later
    Python Version 3.5
    Description: Displays the analysed images overlayed with cell classifications
@@ -12,6 +12,7 @@ import numpy as np
 import cv2
 import pickle
 import IdentiCyte.Globs as Globs
+import sys
 
 
 def display(img_file,  # type: str
@@ -58,7 +59,8 @@ def display(img_file,  # type: str
 
     pics_dir = os.path.split(img_file)[0]
     image_name = os.path.split(img_file)[-1]
-    fontName = os.path.join(os.path.dirname(__file__), 'liberation-fonts-ttf-2.00.1', 'LiberationSans-Regular.ttf')
+    fontName = 'LiberationSans-Regular.ttf'
+    fontName = resource_path(fontName)
 
     # Get the cell data
     res_file = os.path.abspath(os.path.join(pics_dir, 'IdentifiedCellInfo.pkl'))
@@ -168,3 +170,10 @@ def gcd(x, # type: int
     while(y):
         x,y = y, x%y
     return x
+
+def resource_path(font):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    if hasattr(sys, '_MEIPASS'):
+        return os.path.join(sys._MEIPASS, font)
+
+    return os.path.join(os.path.dirname(__file__), 'liberation-fonts-ttf-2.00.1', font)
