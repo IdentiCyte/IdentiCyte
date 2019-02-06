@@ -2,7 +2,7 @@
    File Name: MainUI.py
    Version: 1.0
    Author: Guillaume Garnier
-   Date Modified: 2018-13-12
+   Date Modified: 2019-02-06
    License: GNU-GPL-3.0-or-later
    Python Version 3.5
    Description: Handles the main GUI window and calls all the other functions.
@@ -427,10 +427,10 @@ class MainWindow():
         Globs.end = False
         pic_dir = self.infile.get()
         lib_dir = self.lib.get()
-        if not os.path.exists(pic_dir):
+        if not os.path.isdir(pic_dir):
             Globs.end = True
             self.printout('Please select an input folder.')
-        if not os.path.exists(lib_dir):
+        if not os.path.isdir(lib_dir):
             Globs.end = True
             self.printout('Please select a library folder.')
         try:
@@ -469,10 +469,10 @@ class MainWindow():
             cellSize=self.cellSize.get()
             bf = self.brigthfield.get()
             near = self.near.get()
-            if not os.path.exists(pic_dir):
+            if not os.path.isdir(pic_dir):
                 Globs.end = True
                 self.printout('Please select an input folder.')
-            if not os.path.exists(lib_dir):
+            if not os.path.isdir(lib_dir):
                 Globs.end = True
                 self.printout('Please select a library folder.')
             if not Globs.end:
@@ -509,49 +509,6 @@ class MainWindow():
         else:
             self.printout('The program is currently busy.')
 
-    # def runBatch(self):
-    #     # type: () -> None
-    #     """
-    #     Runs the analysis on a specified folder
-    #     """
-    #     Globs.end = False
-    #     Globs.batchEnd = False
-    #     if (not self.thread.isAlive()) and (not Globs.end):
-    #         lib_dir = self.lib.get()
-    #         pcs = self.pcThresh.get()
-    #         confLev = self.confThresh.get()
-    #         pic_dir = self.infile.get()
-    #         verification = self.userVer.get()
-    #         depth = self.bits.get()
-    #         col = self.color.get()
-    #         meth=self.method.get()
-    #         cellSize=self.cellSize.get()
-    #         bf = self.brigthfield.get()
-    #         near = self.near.get()
-    #         if not os.path.exists(pic_dir):
-    #             Globs.end = True
-    #             self.printout('Please select an input folder.')
-    #         if not os.path.exists(lib_dir):
-    #             Globs.end = True
-    #             self.printout('Please select a library folder.')
-    #         if not Globs.end:
-    #             self.printout('Getting Pictures from: ' + str(self.infile.get()))
-    #             self.thread = Thread(target=batch,
-    #                                  args=(lib_dir,
-    #                                        pic_dir,
-    #                                        self,
-    #                                        verification,
-    #                                        depth,
-    #                                        col,
-    #                                        meth,
-    #                                        cellSize,
-    #                                        pcs,
-    #                                        confLev,
-    #                                        bf,
-    #                                        near))
-    #             self.thread.start()
-    #     else:
-    #         self.printout('The program is currently busy.')
 
     # Displays text in the window's output box
     def printout(self, string):
@@ -580,7 +537,7 @@ class MainWindow():
         """
         Globs.end = False
         lib_dir = self.lib.get()
-        if not os.path.exists(lib_dir):
+        if not os.path.isdir(lib_dir):
             Globs.end = True
             self.printout('Please select a library folder.')
         try:
@@ -699,7 +656,7 @@ class MainWindow():
         """
         Globs.end = False
         pic_dir = self.img.get()
-        if not os.path.exists(pic_dir):
+        if not os.path.isfile(pic_dir):
             Globs.end = True
             self.printout('Please select an input image.')
         if not self.dispThread.isAlive() and not Globs.end:
