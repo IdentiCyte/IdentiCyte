@@ -158,7 +158,7 @@ def WriteResults(stat,
     # Add the percentage of each type of cell counted
     for j in range(len(outStat)):
         if totalNums[2] > 0:
-            outStat[j].insert(1, '%.1lf' % (outStat[j][0]*100/totalNums[2]))
+            outStat[j].insert(1, np.round(outStat[j][0]*100/totalNums[2], 2))
         else:
             outStat[j].insert(1, '0')
         outStat[j].insert(0, typeArray[j])
@@ -219,6 +219,7 @@ def WriteResults(stat,
     row = 1
     for k in outStat:
         k.insert(3,' ')
+
     # Write the summary sheet and the detailed overview
     for col, data in enumerate(outStat[0:-1]):
         summarySheet.write_column(row, col, data[0:3])
