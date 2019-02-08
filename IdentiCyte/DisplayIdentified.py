@@ -32,7 +32,10 @@ def display(img_file,  # type: str
     window : MainWindow
         The main GUI window
     """
-    windName = 'Press Right Arrow Key to display next image, Left Arrow Key for previous, \'s\' to save and \'Esc\' to quit'
+    if os.name == 'posix':
+        windName = 'Press . to display next image, , for previous, \'s\' to save and \'Esc\' to quit'
+    else:
+        windName = 'Press Right Arrow Key to display next image, Left Arrow Key for previous, \'s\' to save and \'Esc\' to quit'
     fontSize = 36
     boxHeight = 50
     colInd = 0
