@@ -2,7 +2,7 @@
    File Name: MainUI.py
    Version: 1.0
    Author: Guillaume Garnier
-   Date Modified: 2019-02-06
+   Date Modified: 2019-02-08
    License: GNU-GPL-3.0-or-later
    Python Version 3.5
    Description: Handles the main GUI window and calls all the other functions.
@@ -660,7 +660,10 @@ class MainWindow():
             Globs.end = True
             self.printout('Please select an input image.')
         if not self.dispThread.isAlive() and not Globs.end:
-            self.dispThread = Thread(target=display,
-                                     args=(pic_dir,
-                                           self))
-            self.dispThread.start()
+            if os.name =='posix':
+                display(pic_dir, self)
+            else:
+                self.dispThread = Thread(target=display,
+                                         args=(pic_dir,
+                                               self))
+                self.dispThread.start()

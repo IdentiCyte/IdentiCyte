@@ -1,7 +1,7 @@
 """
    File Name: WriteResults.py
    Author: Guillaume Garnier
-   Date Modified: 2019-01-07
+   Date Modified: 2019-02-08
    License: GNU-GPL-3.0-or-later
    Python Version 3.5
    Description: Writes the results of the analysis to the summary Excel sheet and pickle file

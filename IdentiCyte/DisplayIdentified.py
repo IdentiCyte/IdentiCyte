@@ -1,7 +1,7 @@
 """
    File Name: DisplayIdentified.py
    Author: Guillaume Garnier
-   Date Modified: 2019-02-01
+   Date Modified: 2019-02-08
    License: GNU-GPL-3.0-or-later
    Python Version 3.5
    Description: Displays the analysed images overlayed with cell classifications
@@ -129,9 +129,9 @@ def display(img_file,  # type: str
         width = int(np.round(mul * np.shape(im)[1] // factor, 0))
         cv2.resizeWindow(windName, width, height)
         key = cv2.waitKeyEx(0)
-        if key == 27 or cv2.getWindowProperty(windName,0) == -1:
+        if key == 27 or cv2.getWindowProperty(windName, 0) == -1:
             break
-        elif key == 2424832 or key == 2490368:
+        elif key == 2424832 or key == 2490368 or key == 44:
             imNum = imNum - 1
         elif key == 115:
             if not os.path.exists(os.path.join(pics_dir, 'Labelled')):
