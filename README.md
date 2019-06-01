@@ -13,7 +13,7 @@ Once the file has been downloaded, and you have read the manual, IdentiCyte can 
 ## How to cite
 If you use IdentiCyte in your research, please cite the following journal article:
 
-G. F. G. Garnier, C. A. Manderson, S. Giri, G. Garnier, IdentiCyte: Simple red blood cell identification software; SoftwareX [In Press].
+Garnier, Guillaume FG, Clare A. Manderson, Saveen Giri, and Gil Garnier. "IdentiCyte: Simple red blood cell identification software." SoftwareX 9 (2019): 223-229.
 
 ## Development and Contributing to IdentiCyte
 
